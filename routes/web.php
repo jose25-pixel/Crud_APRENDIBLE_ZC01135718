@@ -85,7 +85,8 @@ echo "<a href='".Route('contactos')."'> Contatos3 </a>";
 echo "<a href='".Route('contactos')."'> Contatos4 </a>";
 
 });*/
-
-Auth::routes( ['register'=> false] );
+//eliminar la ruta de registrarse
+//Auth::routes( ['register'=> false] );
+Auth::routes();
 
 // eliminar ruta del login creado Route::get('/home', 'HomeController@index')->name('home');

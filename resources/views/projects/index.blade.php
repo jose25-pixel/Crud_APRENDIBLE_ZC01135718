@@ -12,10 +12,13 @@
 
  <p class="lead text-secondary"> Proyectos realizados por jose zabaleta </p>
 
-<ul class="list-group">
+
+
+<ul>
+
  	@if($projects)
 	 	@foreach ( $projects as $project)
-	       <li class="list-group-item border-0 mb-3 shadow-sm"> <a  class=" text-secondary d-flex justify-content-between align-items-center" href=" {{route('projects.show', $project)}} "> <span class="font-weight-bold">  {{$project->title}} </span> <span class=" font-weight-bold"> {{$project->created_at->format('d/m/Y') }}</span>
+	       <li class="list-group-item border-0 mb-3 shadow-sm"> <a  class=" text-secondary d-flex justify-content-between align-items-center" href=" {{route('projects.show', $project)}} "> <span class="font-weight-bold">  {{$project->title}} </span> <span class=" font-weight-bold"> {{$project->created_at}}</span>
 	       	<span class=" font-weight-bold">  {{$project->description}}</span>
 	       	 <span class="text-black-50">  {{$project->created_at }}   </span></a> </li>
 	 	@endforeach
@@ -23,7 +26,9 @@
  	@else
  	<li class="list-group-item border-0 mb-3 shadow-sm">no hay proyecto par mostrar</li>
     @endif
+
  </ul>
+
 </div>
 
 @endsection

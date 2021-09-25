@@ -14,12 +14,13 @@
 				<li class="nav-item"><a class="nav-link  {{ request()->routeIs('projects.*') ?'active': ''}}" href="{{route('projects.index') }}" title="">  @lang('projects')</a></li>
 
 				<li class="nav-item"><a class="nav-link {{request()->routeIs('contact') ?'active': ''}}" href=" {{route('contact')}} " title="">@lang('Contact')</a></li>
+				<li class="nav-item"><a class="nav-link  {{request()->routeIs('register') ?'active': ''}} " href=" {{route('register')}} " title="">registarme</a></li>
 				@auth
 
 					<li><a href="#" onclick="event.preventDefault();
 	               document.getElementById('logout-form').submit();"> Cerrar Seccion</a></li>
 					@else
-						<li class="nav-item"><a class="nav-link  {{request()->routeIs('login') ?'active': ''}} " href=" {{route('login')}} " title="">registarme</a></li>
+						<li class="nav-item"><a class="nav-link  {{request()->routeIs('login') ?'active': ''}} " href=" {{route('login')}} " title="">Iniciar Seccion</a></li>
 
 					@endauth
 
